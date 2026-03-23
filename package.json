@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:e2e": "playwright test"
+    "test:ui:e2e": "playwright test tests/ui/tests/book.e2e.spec.ts",
+    "test:api:e2e": "playwright test tests/api/tests",
+    "test:api:happy": "playwright test tests/api/tests/api.happy.spec.ts --project=chromium",
+    "test:api:negative": "playwright test tests/api/tests/api.negative.spec.ts --project=chromium",
+    "test:api:sanity": "playwright test tests/api/tests -g @sanity --project=chromium",
+    "test:api:smoke": "playwright test tests/api/tests -g @smoke --project=chromium",
+    "test:api:regression": "playwright test tests/api/tests -g @regression --project=chromium"
   },
   "dependencies": {
     "next": "15.5.2",
